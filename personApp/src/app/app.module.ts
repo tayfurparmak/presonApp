@@ -9,6 +9,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PersonCreateComponent } from './components/person-create/person-create.component';
+import { FormsModule } from '@angular/forms';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { PersonCreateComponent } from './components/person-create/person-create.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,FormsModule,
+    CommonModule
+
   ],
   providers: [
     provideClientHydration()
