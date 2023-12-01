@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+remove(arg0: any) {
+throw new Error('Method not implemented.');
+}
+projectService: any;
 
 }
