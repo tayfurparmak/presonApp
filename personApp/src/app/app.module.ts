@@ -28,7 +28,8 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,FormsModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
 
   ],
   providers: [

@@ -381,6 +381,9 @@
   <table class="w-full text-sm text-left rtl:text-right text-blue-100 dark:text-blue-100" *ngIf="projectService.Get().length">
       <thead class="text-xs text-white uppercase bg-blue-600 dark:text-white">
           <tr>
+            <th scope="col" class="px-6 py-3">
+              #
+            </th>
               <th scope="col" class="px-6 py-3">
                 Project Name
               </th>
@@ -400,9 +403,7 @@
       </thead>
       <tbody>
           <tr class="bg-blue-500 border-b border-blue-400" *ngFor="let item of projectService.Get()">
-              <th scope="row" class="px-6 py-4 font-medium text-blue-50 whitespace-nowrap dark:text-blue-100">
-                  Apple MacBook Pro 17"
-              </th>
+
               <td class="px-6 py-4">
                 {{ item.id }}
               </td>
@@ -410,7 +411,14 @@
                 {{ item.name }}
               </td>
               <td class="px-6 py-4">
+                {{ item.technologies }}
+              </td>
+
+              <td class="px-6 py-4">
                 {{ item.category }}
+              </td>
+              <td class="px-6 py-4">
+                {{ item.time }}
               </td>
               <td class="px-6 py-4">
                 {{ item.description }}

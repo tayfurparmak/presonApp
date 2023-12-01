@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProjectService } from '../../services/project.service';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-remove(arg0: any) {
-throw new Error('Method not implemented.');
-}
-projectService: any;
+  constructor(public projectService: ProjectService) {}
+
+  public remove(id: number) {
+    if (confirm('Are you sure?')) {
+      this.projectService.Remove(id);
+    }
+  }
 
 }
